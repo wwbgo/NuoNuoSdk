@@ -1,0 +1,3 @@
+﻿serialNos	Array	N	22021114442603319271	50	发票流水号，两字段二选一，同时存在以流水号为准（最多查50个订单号）
+orderNos	Array	N	-	50	订单编号（最多查50个订单号）
+isOfferInvoiceDetail	String	N	1	1	是否需要提供明细 1-是, 0-否(不填默认 0)

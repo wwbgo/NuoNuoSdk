@@ -1,0 +1,4 @@
+﻿result	Object	响应
+[
+invoiceId	String	发票流水号(提交成功则返回发票请求流水号)	11121212121212
+]

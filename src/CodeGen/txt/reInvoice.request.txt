@@ -1,0 +1,5 @@
+﻿fpqqlsh	String	N	20052515495203513451		发票流水号，流水号和订单号两字段二选一，同时存在以流水号为准
+orderno	String	N	1231231		订单
+nextInvoiceCode	String	N		12	指定发票代码（票种为c普纸、f收购纸票时可以指定卷开票） 非必填
+invoiceNumStart	String	N		8	发票起始号码（票种为c普纸、f收购纸票） 当指定代码有值时，发票起始号码必填
+invoiceNumEnd	String	N		8	发票终止号码（票种为c普纸、f收购纸票） 当指定代码有值时，发票终止号码必填

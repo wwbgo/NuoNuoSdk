@@ -1,17 +1,16 @@
-﻿global using System.Text;
+﻿global using Newtonsoft.Json;
+global using System.Diagnostics.CodeAnalysis;
+global using System.Text;
 global using System.Text.Json.Serialization;
-global using Newtonsoft.Json;
-
-using NuoNuoSdk.Dtos;
-using NuoNuoSdk.Requests;
-using NuoNuoSdk.Responses;
+global using NuoNuoSdk.Requests;
+global using NuoNuoSdk.Responses;
 
 namespace NuoNuoSdk;
 
 /// <summary>
 /// 诺诺开放平台SDK
 /// </summary>
-public interface INuoNuoSdk
+public partial interface INuoNuoSdk
 {
     /// <summary>
     /// 获取access_token
@@ -43,9 +42,8 @@ public interface INuoNuoSdk
     /// <typeparam name="TResponse"></typeparam>
     /// <param name="request"></param>
     /// <param name="options"></param>
-    /// <param name="canLog"></param>
     /// <returns></returns>
-    Task<TResponse> ExecuteAsync<TRequest, TResponse>(TRequest request, NuoNuoOptions options = null, bool canLog = true)
+    Task<TResponse> ExecuteAsync<TRequest, TResponse>(TRequest request, NuoNuoOptions options = null)
         where TRequest : NuoNuoRequest
         where TResponse : NuoNuoResponse;
 

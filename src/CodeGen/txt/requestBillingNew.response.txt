@@ -1,0 +1,4 @@
+﻿result	Object	响应
+[
+invoiceSerialNum	String	发票流水号	17102510461601000165
+]

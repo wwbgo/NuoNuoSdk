@@ -1,8 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using NuoNuoSdk;
-using NuoNuoSdk.Dtos;
 using NuoNuoSdk.Requests;
-using NuoNuoSdk.Responses;
 
 namespace Sample.Controllers;
 
@@ -22,9 +20,6 @@ public class TestController : ControllerBase
         _nuoNuoSdk = nuoNuoSdk;
     }
 
-    [HttpGet("ping")]
-    public string Ping() => "pong";
-
     [HttpGet("nuonuo")]
     public async Task<string> Nuonuo()
     {
@@ -33,21 +28,22 @@ public class TestController : ControllerBase
         _logger.LogInformation("获取token:{token}", token);
         //var token = new MerchantTokenResponse
         //{
-        //    AccessToken = ""
+        //    AccessToken = "none"
         //};
 
         //查询余票
-        var stockRes = await _nuoNuoSdk.ExecuteAsync<GetInvoiceStockRequest, GetInvoiceStockResponse>(new GetInvoiceStockRequest
+        var stockRes = await _nuoNuoSdk.GetInvoiceStockAsync(new GetInvoiceStockRequest
         {
-            AccessToken = token.AccessToken
+            AccessToken = token.AccessToken,
+            MachineCode = "111111111111",
         });
         _logger.LogInformation("查询余票:{body}", stockRes.Body);
 
         //开票
-        var billingRes = await _nuoNuoSdk.ExecuteAsync<RequestBillingRequest, RequestBillingResponse>(new RequestBillingRequest
+        var billingRes = await _nuoNuoSdk.RequestBillingAsync(new RequestBillingRequest
         {
             AccessToken = token.AccessToken,
-            Order = new OrderDto
+            Order = new RequestBillingRequest.OrderDto
             {
                 BuyerTaxNum = "6876413SAFDG"
             }
@@ -55,7 +51,7 @@ public class TestController : ControllerBase
         _logger.LogInformation("开票:{body}", billingRes.Body);
 
         //查询
-        var invoiceRes = await _nuoNuoSdk.ExecuteAsync<QueryInvoiceResultRequest, QueryInvoiceResultResponse>(new QueryInvoiceResultRequest
+        var invoiceRes = await _nuoNuoSdk.QueryInvoiceResultAsync(new QueryInvoiceResultRequest
         {
             AccessToken = token.AccessToken,
             SerialNos = new List<string> { billingRes.Result.InvoiceSerialNum }
@@ -64,19 +60,19 @@ public class TestController : ControllerBase
 
         var r = invoiceRes.Result.First();
         //重发
-        var deliveryInvoiceRes = await _nuoNuoSdk.ExecuteAsync<DeliveryInvoiceRequest, NuoNuoResponse>(new DeliveryInvoiceRequest
+        var deliveryInvoiceRes = await _nuoNuoSdk.DeliveryInvoiceAsync(new DeliveryInvoiceRequest
         {
             AccessToken = token.AccessToken,
             InvoiceCode = r.InvoiceCode,
-            InvoiceNumber = r.InvoiceNo,
-            TaxNumber = r.SalerTaxNum,
-            Mail = "zuoxiang42@gmail.com",
+            InvoiceNum = r.InvoiceNo,
+            Taxnum = r.SalerTaxNum,
+            Mail = "wwbgo@qq.com",
             Phone = ""
         });
         _logger.LogInformation("重发发票:{body}", deliveryInvoiceRes.Body);
 
         //作废
-        var cancellationRes = await _nuoNuoSdk.ExecuteAsync<InvoiceCancellationRequest, InvoiceCancellationResponse>(new InvoiceCancellationRequest
+        var cancellationRes = await _nuoNuoSdk.InvoiceCancellationAsync(new InvoiceCancellationRequest
         {
             AccessToken = token.AccessToken,
             InvoiceId = billingRes.Result.InvoiceSerialNum,

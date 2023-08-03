@@ -1,0 +1,5 @@
+﻿taxnum	String	Y	339901999999199	20	销方税号
+invoiceCode	String	N	131880930199	12	发票代码（全电发票时可为空）
+invoiceNum	String	Y	19902647	8	发票号码（全电发票时为20位，其他发票时为8位）
+phone	String	N	133333333333	11	交付手机号，和交付邮箱至少有一个不为空
+mail	String	N			交付邮箱，和交付手机号至少有一个不为空

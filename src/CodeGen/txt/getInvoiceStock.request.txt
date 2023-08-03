@@ -1,0 +1,8 @@
+﻿departmentId	String	N			部门id（不传分机号、机器编号时使用）；部门和分机、机器编号等都不传时，返回税号下全部报税信息
+extensionNums	Array	N	1	100	分机号列表（只传分机号时使用）
+machineCode	String	N	123456789012	12	机器编号单个查询（只传机器编号时使用）
+extMachineCodePairs	Array	N		1	分机号+机器编号联合查询（只能传入一对分机号和机器编号），精确查询某设备时建议使用此种方式
+[
+extensionNum	String	N	1	5	分机号
+machineCode	String	N	123456789012	12	机器编号
+]

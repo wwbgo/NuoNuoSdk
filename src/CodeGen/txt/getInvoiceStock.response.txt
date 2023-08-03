@@ -1,0 +1,12 @@
+﻿result	Array	具体库存信息
+[
+extensionNumber	Number	分机号	1
+machineCode	String	机器编号	
+terminalNumber	String	终端号	
+invoiceLine	String	发票种类：p:电子增值税普通发票；c:增值税普通发票(纸票)；s:增值税专用发票；e:收购发票(电子)；f:收购发票(纸质)；r:增值税普通发票(卷式)；b:增值税电子专用发票；j:机动车销售统一发票；u:二手车销售统一发票	p
+remainNum	Number	200	200
+typeCode	String	发票代码	
+invoiceNumStart	String	起始发票号码	
+invoiceNumEnd	String	终止发票号码	
+updateTime	String	更新时间	2019-08-16 15:39:28
+]

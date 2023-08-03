@@ -1,0 +1,1 @@
+﻿CodeGen.CodeGenerator.Gen();

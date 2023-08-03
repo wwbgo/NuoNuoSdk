@@ -1,18 +1,17 @@
-﻿using System.Security.Cryptography;
-using System.Web;
-using Microsoft.Extensions.Logging;
+﻿using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Newtonsoft.Json.Serialization;
-using NuoNuoSdk.Dtos;
 using NuoNuoSdk.Requests;
 using NuoNuoSdk.Responses;
+using System.Security.Cryptography;
+using System.Web;
 
 namespace NuoNuoSdk;
 
 /// <summary>
 /// 诺诺开放平台SDK
 /// </summary>
-public class NuoNuoSdk : INuoNuoSdk
+public partial class NuoNuoSdk : INuoNuoSdk
 {
     private static readonly JsonSerializerSettings JsonSetting = new()
     {
@@ -99,9 +98,8 @@ public class NuoNuoSdk : INuoNuoSdk
     /// <typeparam name="TResponse"></typeparam>
     /// <param name="request"></param>
     /// <param name="options"></param>
-    /// <param name="canLog"></param>
     /// <returns></returns>
-    public async Task<TResponse> ExecuteAsync<TRequest, TResponse>(TRequest request, NuoNuoOptions options = null, bool canLog = true)
+    public async Task<TResponse> ExecuteAsync<TRequest, TResponse>(TRequest request, NuoNuoOptions options = null)
         where TRequest : NuoNuoRequest
         where TResponse : NuoNuoResponse
     {
@@ -142,8 +140,7 @@ public class NuoNuoSdk : INuoNuoSdk
         }
 
         HttpContent httpContent = new StringContent(body, Encoding.UTF8, "application/json");
-        if (canLog)
-            _logger.LogInformation("诺诺请求:header: {@header} body: {body}", header, body);
+        _logger.LogDebug("诺诺请求:header: {@header} body: {body}", header, body);
 
         var res = await client.PostAsync(requestUri, httpContent);
         var data = await res.Content.ReadAsStringAsync();
@@ -151,8 +148,7 @@ public class NuoNuoSdk : INuoNuoSdk
         {
             throw new HttpRequestException($"诺诺请求异常:{data}");
         }
-        if (canLog)
-            _logger.LogInformation("诺诺返回:{data}", data);
+        _logger.LogDebug("诺诺返回:{data}", data);
 
         var response = JsonConvert.DeserializeObject<TResponse>(data);
         response.Body = data;

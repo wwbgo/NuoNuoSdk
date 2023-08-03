@@ -1,0 +1,5 @@
+﻿invoiceId	String	Y	20052622361801000032	25	发票流水号
+invoiceCode	String	Y	5000201530	12	发票代码
+invoiceNo	String	Y	23501899	8	发票号码
+invalidReason	String	N		1	作废原因（全电纸票时需要传（1:销货退回;2:开票有误;3:服务中止;4:其他），默认 2）
+specificReason	String	N		255	其他作废原因详情（全电纸票且作废原因选择4-其他时需要传）
