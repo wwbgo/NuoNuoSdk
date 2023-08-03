@@ -28,9 +28,14 @@ public class NuoNuoOptions
     public string UserTax { get; set; }
 
     /// <summary>
+    /// 授权码【消息头】
+    /// </summary>
+    public string AccessToken { get; set; }
+
+    /// <summary>
     /// 超时时间
     /// </summary>
-    public int Timeout { get; set; } = 3;
+    public int Timeout { get; set; } = 10;
 
     /// <summary>
     /// Sdk版本(默认值和Java SDK版本一样)

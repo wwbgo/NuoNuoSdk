@@ -15,6 +15,13 @@ public class NuoNuoRequest
     public virtual string Method { get; set; }
 
     /// <summary>
+    /// 授权商户的税号（自用型应用非必填，第三方应用必填）【消息头】
+    /// </summary>
+    [Newtonsoft.Json.JsonIgnore]
+    [System.Text.Json.Serialization.JsonIgnore]
+    public string UserTax { get; set; }
+
+    /// <summary>
     /// 授权码【消息头】
     /// </summary>
     [Newtonsoft.Json.JsonIgnore]

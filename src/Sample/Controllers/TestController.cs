@@ -23,26 +23,16 @@ public class TestController : ControllerBase
     [HttpGet("nuonuo")]
     public async Task<string> Nuonuo()
     {
-        //获取token,根据token有效期自行维护缓存
-        var token = await _nuoNuoSdk.GetMerchantTokenAsync();
-        _logger.LogInformation("获取token:{token}", token);
-        //var token = new MerchantTokenResponse
-        //{
-        //    AccessToken = "none"
-        //};
-
         //查询余票
         var stockRes = await _nuoNuoSdk.GetInvoiceStockAsync(new GetInvoiceStockRequest
         {
-            AccessToken = token.AccessToken,
-            MachineCode = "111111111111",
+            ExtensionNums = new[] { "0", "8889" },
         });
         _logger.LogInformation("查询余票:{body}", stockRes.Body);
 
         //开票
         var billingRes = await _nuoNuoSdk.RequestBillingAsync(new RequestBillingRequest
         {
-            AccessToken = token.AccessToken,
             Order = new RequestBillingRequest.OrderDto
             {
                 BuyerTaxNum = "6876413SAFDG"
@@ -53,7 +43,6 @@ public class TestController : ControllerBase
         //查询
         var invoiceRes = await _nuoNuoSdk.QueryInvoiceResultAsync(new QueryInvoiceResultRequest
         {
-            AccessToken = token.AccessToken,
             SerialNos = new List<string> { billingRes.Result.InvoiceSerialNum }
         });
         _logger.LogInformation("查询发票:{body}", invoiceRes.Body);
@@ -62,7 +51,6 @@ public class TestController : ControllerBase
         //重发
         var deliveryInvoiceRes = await _nuoNuoSdk.DeliveryInvoiceAsync(new DeliveryInvoiceRequest
         {
-            AccessToken = token.AccessToken,
             InvoiceCode = r.InvoiceCode,
             InvoiceNum = r.InvoiceNo,
             Taxnum = r.SalerTaxNum,
@@ -74,7 +62,6 @@ public class TestController : ControllerBase
         //作废
         var cancellationRes = await _nuoNuoSdk.InvoiceCancellationAsync(new InvoiceCancellationRequest
         {
-            AccessToken = token.AccessToken,
             InvoiceId = billingRes.Result.InvoiceSerialNum,
             InvoiceCode = r.InvoiceCode,
             InvoiceNo = r.InvoiceNo

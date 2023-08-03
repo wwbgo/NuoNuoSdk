@@ -1,8 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Newtonsoft.Json.Serialization;
-using NuoNuoSdk.Requests;
-using NuoNuoSdk.Responses;
 using System.Security.Cryptography;
 using System.Web;
 
@@ -13,6 +11,7 @@ namespace NuoNuoSdk;
 /// </summary>
 public partial class NuoNuoSdk : INuoNuoSdk
 {
+    private static (bool Success, string AccessToken, long Expires) Token;
     private static readonly JsonSerializerSettings JsonSetting = new()
     {
         ContractResolver = new CamelCasePropertyNamesContractResolver(),
@@ -103,9 +102,6 @@ public partial class NuoNuoSdk : INuoNuoSdk
         where TRequest : NuoNuoRequest
         where TResponse : NuoNuoResponse
     {
-        if (string.IsNullOrEmpty(request.AccessToken))
-            throw new ArgumentNullException(nameof(request.AccessToken));
-
         //参数生成
         options ??= _options;
         var nonce = new Random().Next(10000000, 99999999).ToString();
@@ -129,8 +125,8 @@ public partial class NuoNuoSdk : INuoNuoSdk
         var header = new Dictionary<string, string>
         {
             { "X-Nuonuo-Sign", sign },
-            { "accessToken", request.AccessToken },
-            { "userTax", options.UserTax },
+            { "accessToken", await GetTokenAsync(request,options) },
+            { "userTax", request.UserTax??options.UserTax },
             { "method", request.Method },
             { "sdkVer",options.Version }
         };
@@ -158,6 +154,33 @@ public partial class NuoNuoSdk : INuoNuoSdk
 
     #region private method
 
+    private async Task<string> GetTokenAsync(NuoNuoRequest request, NuoNuoOptions options = null)
+    {
+        var token = request.AccessToken ?? options.AccessToken;
+        if (string.IsNullOrEmpty(token))
+        {
+            if (Token.Success && Token.Expires < DateTime.UtcNow.Ticks)
+            {
+                token = Token.AccessToken;
+            }
+            else
+            {
+                var _token = await GetMerchantTokenAsync(options);
+                if (_token != null && _token.Success)
+                {
+                    Token.Success = _token.Success;
+                    Token.AccessToken = _token.AccessToken;
+                    Token.Expires = DateTime.UtcNow.AddMinutes(-30).AddSeconds(_token.ExpiresIn).Ticks;
+
+                    token = Token.AccessToken;
+                }
+            }
+        }
+        if (string.IsNullOrEmpty(token))
+            throw new ArgumentNullException("AccessToken");
+        return token;
+    }
+
     /// <summary>
     /// 执行form请求
     /// </summary>
@@ -178,15 +201,13 @@ public partial class NuoNuoSdk : INuoNuoSdk
         return data;
     }
 
-    private static readonly DateTime Time1970 = new(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
-
     /// <summary>
     /// 获取时间戳
     /// </summary>
     /// <returns></returns>
     private static string GetTimestamp()
     {
-        var ts = DateTime.UtcNow - Time1970;
+        var ts = DateTime.UtcNow - DateTime.UnixEpoch;
         return Convert.ToInt64(ts.TotalSeconds).ToString();
     }
 

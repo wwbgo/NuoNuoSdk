@@ -13,7 +13,7 @@
 		<IsPackable>true</IsPackable>
 		<TargetFrameworks>netstandard2.1;net6.0;net7.0</TargetFrameworks>
 		<ImplicitUsings>enable</ImplicitUsings>
-		<Version>1.1.2$(VersionSuffix)</Version>
+		<Version>1.1.4$(VersionSuffix)</Version>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 		<Copyright>MIT</Copyright>
 		<PackageIcon>icon.png</PackageIcon>

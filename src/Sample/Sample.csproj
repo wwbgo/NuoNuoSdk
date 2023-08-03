@@ -7,8 +7,11 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="NuoNuoOpenSdk" Version="1.1.2" />
 		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\NuoNuoSdk\NuoNuoSdk.csproj" />
 	</ItemGroup>
 
 </Project>
