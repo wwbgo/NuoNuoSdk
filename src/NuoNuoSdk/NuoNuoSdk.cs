@@ -136,15 +136,15 @@ public partial class NuoNuoSdk : INuoNuoSdk
         }
 
         HttpContent httpContent = new StringContent(body, Encoding.UTF8, "application/json");
-        _logger.LogDebug("诺诺请求:header: {@header} body: {body}", header, body);
+        _logger.LogDebug("NuoNuo request: header: {@header} body: {body}", header, body);
 
         var res = await client.PostAsync(requestUri, httpContent);
         var data = await res.Content.ReadAsStringAsync();
         if (!res.IsSuccessStatusCode)
         {
-            throw new HttpRequestException($"诺诺请求异常:{data}");
+            throw new HttpRequestException($"NuoNuo request failed: {data}");
         }
-        _logger.LogDebug("诺诺返回:{data}", data);
+        _logger.LogDebug("NuoNuo response: {data}", data);
 
         var response = JsonConvert.DeserializeObject<TResponse>(data);
         response.Body = data;
@@ -194,10 +194,10 @@ public partial class NuoNuoSdk : INuoNuoSdk
         {
             Content = new FormUrlEncodedContent(dic)
         };
-        _logger.LogInformation("诺诺请求:{@dic}", dic);
+        _logger.LogInformation("NuoNuo request: {@dic}", dic);
         var res = await client.SendAsync(req);
         var data = await res.Content.ReadAsStringAsync();
-        _logger.LogInformation("诺诺返回:{@data}", data);
+        _logger.LogInformation("NuoNuo response: {@data}", data);
         return data;
     }
 
