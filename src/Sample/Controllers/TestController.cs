@@ -35,7 +35,36 @@ public class TestController : ControllerBase
         {
             Order = new RequestBillingRequest.OrderDto
             {
-                BuyerTaxNum = "6876413SAFDG"
+                BuyerName = "上海繁易信息科技股份有限公司",
+                BuyerTaxNum = "111111111111111111",
+                BuyerPhone = "13818989495",
+                BuyerAddress = "上海市杨浦区国安路386号9楼",
+                BuyerAccount = "",
+                BuyerTel = "",
+                Email = "",
+                SalerAccount = "6222023803013297860",
+                SalerTel = "021-68683993",
+                SalerAddress = "上海市杨浦区黄兴路2005 弄2 号（B 楼）706-3 室",
+                SalerTaxNum = "339901999999142",
+                Clerk = "刘艳宁",
+                Payee = "李冰冰",
+                Checker = "张欢",
+                OrderNo = DateTime.Now.Ticks.ToString(),
+                InvoiceType = "1",
+                InvoiceLine = "pc",
+                PushMode = "1",
+                InvoiceDate = DateTime.Now.ToInvoiceDatString(),
+                InvoiceDetail = new[]{ new RequestBillingRequest.OrderDto.InvoiceDetailDto
+                {
+                    GoodsName = "技术服务费",
+                    Num = "1",
+                    Price = "5",
+                    WithTaxFlag = "1",
+                    TaxRate = "0.06",
+                    SpecType = "流量卡充值",
+                    Unit = "次",
+                    GoodsCode = "3040203",
+                } },
             }
         });
         _logger.LogInformation("开票:{body}", billingRes.Body);

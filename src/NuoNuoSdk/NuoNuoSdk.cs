@@ -159,7 +159,7 @@ public partial class NuoNuoSdk : INuoNuoSdk
         var token = request.AccessToken ?? options.AccessToken;
         if (string.IsNullOrEmpty(token))
         {
-            if (Token.Success && Token.Expires < DateTime.UtcNow.Ticks)
+            if (Token.Success && Token.Expires > DateTime.UtcNow.Ticks)
             {
                 token = Token.AccessToken;
             }
