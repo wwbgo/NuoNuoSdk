@@ -12,7 +12,7 @@ public class ReInvoiceRequest : NuoNuoRequest
     /// 发票流水号，流水号和订单号两字段二选一，同时存在以流水号为准
     /// <code> 必填: N </code>
     /// <code> 长度:  </code>
-    /// <code> 示例: 20052515495203513451 </code>
+    /// <code> 示例: <![CDATA[20052515495203513451]]> </code>
     /// </summary>
     [JsonPropertyName("fpqqlsh")]
     [JsonProperty("fpqqlsh")]
@@ -23,7 +23,7 @@ public class ReInvoiceRequest : NuoNuoRequest
     /// 订单
     /// <code> 必填: N </code>
     /// <code> 长度:  </code>
-    /// <code> 示例: 1231231 </code>
+    /// <code> 示例: <![CDATA[1231231]]> </code>
     /// </summary>
     [JsonPropertyName("orderno")]
     [JsonProperty("orderno")]
@@ -34,7 +34,7 @@ public class ReInvoiceRequest : NuoNuoRequest
     /// 指定发票代码（票种为c普纸、f收购纸票时可以指定卷开票） 非必填
     /// <code> 必填: N </code>
     /// <code> 长度: 12 </code>
-    /// <code> 示例:  </code>
+    /// <code> 示例: <![CDATA[]]> </code>
     /// </summary>
     [JsonPropertyName("nextInvoiceCode")]
     [JsonProperty("nextInvoiceCode")]
@@ -45,7 +45,7 @@ public class ReInvoiceRequest : NuoNuoRequest
     /// 发票起始号码（票种为c普纸、f收购纸票） 当指定代码有值时，发票起始号码必填
     /// <code> 必填: N </code>
     /// <code> 长度: 8 </code>
-    /// <code> 示例:  </code>
+    /// <code> 示例: <![CDATA[]]> </code>
     /// </summary>
     [JsonPropertyName("invoiceNumStart")]
     [JsonProperty("invoiceNumStart")]
@@ -56,7 +56,7 @@ public class ReInvoiceRequest : NuoNuoRequest
     /// 发票终止号码（票种为c普纸、f收购纸票） 当指定代码有值时，发票终止号码必填
     /// <code> 必填: N </code>
     /// <code> 长度: 8 </code>
-    /// <code> 示例:  </code>
+    /// <code> 示例: <![CDATA[]]> </code>
     /// </summary>
     [JsonPropertyName("invoiceNumEnd")]
     [JsonProperty("invoiceNumEnd")]

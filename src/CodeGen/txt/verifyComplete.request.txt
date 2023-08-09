@@ -1,0 +1,5 @@
+﻿extensionNumber	String	N	8888	5	分机号
+deptId	String	N		32	诺诺系统中的部门id
+clerkId	String	N		32	诺诺系统中的开票员id
+queryType	String	N	2	2	登录操作类型： 0-扫码登录验证完成操作（默认） 1-查询扫码登录结果 2-短信登录提交登录（此时verifyCode 必传） 3-查询短信登录结果
+verifyCode	Number	N	123456	10	短信验证码（当全电发票开具进行短信验证码登录时才需要传）

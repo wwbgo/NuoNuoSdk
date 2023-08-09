@@ -10,7 +10,7 @@ public class InvoiceCancellationResponse : NuoNuoResponse<InvoiceCancellationRes
     {
         /// <summary>
         /// 发票流水号(提交成功则返回发票请求流水号)
-        /// <code> 示例: 11121212121212 </code>
+        /// <code> 示例: <![CDATA[11121212121212]]> </code>
         /// </summary>
         [JsonPropertyName("invoiceId")]
         [JsonProperty("invoiceId")]

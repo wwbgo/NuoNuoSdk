@@ -10,7 +10,7 @@ public class RequestBillingResponse : NuoNuoResponse<RequestBillingResponse.Requ
     {
         /// <summary>
         /// 发票流水号
-        /// <code> 示例: 17102510461601000165 </code>
+        /// <code> 示例: <![CDATA[17102510461601000165]]> </code>
         /// </summary>
         [JsonPropertyName("invoiceSerialNum")]
         [JsonProperty("invoiceSerialNum")]

@@ -10,7 +10,7 @@ public class GetInvoiceStockResponse : NuoNuoResponse<IList<GetInvoiceStockRespo
     {
         /// <summary>
         /// 分机号
-        /// <code> 示例: 1 </code>
+        /// <code> 示例: <![CDATA[1]]> </code>
         /// </summary>
         [JsonPropertyName("extensionNumber")]
         [JsonProperty("extensionNumber")]
@@ -19,7 +19,7 @@ public class GetInvoiceStockResponse : NuoNuoResponse<IList<GetInvoiceStockRespo
 
         /// <summary>
         /// 机器编号
-        /// <code> 示例:  </code>
+        /// <code> 示例: <![CDATA[]]> </code>
         /// </summary>
         [JsonPropertyName("machineCode")]
         [JsonProperty("machineCode")]
@@ -28,7 +28,7 @@ public class GetInvoiceStockResponse : NuoNuoResponse<IList<GetInvoiceStockRespo
 
         /// <summary>
         /// 终端号
-        /// <code> 示例:  </code>
+        /// <code> 示例: <![CDATA[]]> </code>
         /// </summary>
         [JsonPropertyName("terminalNumber")]
         [JsonProperty("terminalNumber")]
@@ -37,7 +37,7 @@ public class GetInvoiceStockResponse : NuoNuoResponse<IList<GetInvoiceStockRespo
 
         /// <summary>
         /// 发票种类：p:电子增值税普通发票；c:增值税普通发票(纸票)；s:增值税专用发票；e:收购发票(电子)；f:收购发票(纸质)；r:增值税普通发票(卷式)；b:增值税电子专用发票；j:机动车销售统一发票；u:二手车销售统一发票
-        /// <code> 示例: p </code>
+        /// <code> 示例: <![CDATA[p]]> </code>
         /// </summary>
         [JsonPropertyName("invoiceLine")]
         [JsonProperty("invoiceLine")]
@@ -46,7 +46,7 @@ public class GetInvoiceStockResponse : NuoNuoResponse<IList<GetInvoiceStockRespo
 
         /// <summary>
         /// 200
-        /// <code> 示例: 200 </code>
+        /// <code> 示例: <![CDATA[200]]> </code>
         /// </summary>
         [JsonPropertyName("remainNum")]
         [JsonProperty("remainNum")]
@@ -55,7 +55,7 @@ public class GetInvoiceStockResponse : NuoNuoResponse<IList<GetInvoiceStockRespo
 
         /// <summary>
         /// 发票代码
-        /// <code> 示例:  </code>
+        /// <code> 示例: <![CDATA[]]> </code>
         /// </summary>
         [JsonPropertyName("typeCode")]
         [JsonProperty("typeCode")]
@@ -64,7 +64,7 @@ public class GetInvoiceStockResponse : NuoNuoResponse<IList<GetInvoiceStockRespo
 
         /// <summary>
         /// 起始发票号码
-        /// <code> 示例:  </code>
+        /// <code> 示例: <![CDATA[]]> </code>
         /// </summary>
         [JsonPropertyName("invoiceNumStart")]
         [JsonProperty("invoiceNumStart")]
@@ -73,7 +73,7 @@ public class GetInvoiceStockResponse : NuoNuoResponse<IList<GetInvoiceStockRespo
 
         /// <summary>
         /// 终止发票号码
-        /// <code> 示例:  </code>
+        /// <code> 示例: <![CDATA[]]> </code>
         /// </summary>
         [JsonPropertyName("invoiceNumEnd")]
         [JsonProperty("invoiceNumEnd")]
@@ -82,7 +82,7 @@ public class GetInvoiceStockResponse : NuoNuoResponse<IList<GetInvoiceStockRespo
 
         /// <summary>
         /// 更新时间
-        /// <code> 示例: 2019-08-16 15:39:28 </code>
+        /// <code> 示例: <![CDATA[2019-08-16 15:39:28]]> </code>
         /// </summary>
         [JsonPropertyName("updateTime")]
         [JsonProperty("updateTime")]

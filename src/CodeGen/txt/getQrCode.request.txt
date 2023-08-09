@@ -1,0 +1,4 @@
+﻿extensionNumber	String	N		5	分机号
+deptId	String	N		32	部门id
+clerkId	String	N		32	开票员id
+queryType	String	Y	1	1	操作类型：0-刷新获取税局当前开票实人认证二维码 1-查询获取诺诺已获取的开票实人认证二维码； 2-刷新获取登录认证二维码 3-查询获取诺诺已获取登录认证二维码；4-发送短信验证码（短信验证码登录时） 5-查询短信验证发送状态

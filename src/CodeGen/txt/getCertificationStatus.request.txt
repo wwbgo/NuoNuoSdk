@@ -1,0 +1,5 @@
+﻿extensionNumber	String	N			分机号
+deptId	String	N			部门id
+clerkId	String	N			开票员id
+queryType	String	Y	2		操作类型：0-刷新开票认证状态（刷新认证状态）1-查询开票认证状态（查询库里的认证状态）2-查询全电登录状态（查询库里的全电登录状态）
+eleAccount	String	N	13888888888		全电账号

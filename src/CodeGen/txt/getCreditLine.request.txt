@@ -1,0 +1,4 @@
+﻿extensionNumber	String	N	8888	5	分机号
+deptId	String	N		32	诺诺系统中的部门id
+clerkId	String	N		32	诺诺系统中的开票员id
+queryType	String	Y	1	1	操作类型：0-刷新（从税局更新库里授信额度） 1-查询（查询库里的授信额度）

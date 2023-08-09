@@ -1,0 +1,17 @@
+﻿result	Object	结果	
+[
+requestStatus	String	0-查询中；1-成功；2-失败	1
+message	String	结果信息（查询操作）	OK
+taxNum	String	税号	339901999999199
+extensionNumber	String	分机号	8888
+account	String	全电账号（脱敏处理）	138****8888
+availableCreditLine	String	剩余可用授信额度（不含税金额，精确到小数点后两位）	9000.12
+usedCreditLine	String	已使用授信额度（不含税金额，精确到小数点后两位）	1000.12
+totalCreditLine	String	总授信额度（不含税金额，精确到小数点后两位）	10000.24
+availableCount	Number	剩余纸质发票张数（全电纸票）	10
+usedCount	Number	已使用发票张数（全电纸票-蓝票）	10
+invoicedBlueCount	Number	已开具蓝票张数（全电纸票+全电电票）	10
+invoicedAmount	String	已开发票合计金额（不含税金额，精确到小数点后两位）	1000.12
+invoicedTax	String	已开发票累计税额（精确到小数点后两位）	100.1
+amountUpdateTime	String	授信额度更新时间	2023-03-23 09:12:20
+]

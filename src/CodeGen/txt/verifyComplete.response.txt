@@ -1,0 +1,9 @@
+﻿result	Object	结果	
+[
+status	String	0-登录执行中；1-成功；2-失败/未登录	1
+message	String	结果信息（登录成功/失败原因）	
+loginType	String	登录方式：1-扫码登录 2-短信验证码登录	2
+taxNum	String	税号	339901999999199
+extensionNumber	String	分机号	1000
+account	String	用户名/手机号（脱敏处理）	138****1234
+]

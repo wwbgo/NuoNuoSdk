@@ -12,7 +12,7 @@ public class GetInvoiceStockRequest : NuoNuoRequest
     /// 部门id（不传分机号、机器编号时使用）；部门和分机、机器编号等都不传时，返回税号下全部报税信息
     /// <code> 必填: N </code>
     /// <code> 长度:  </code>
-    /// <code> 示例:  </code>
+    /// <code> 示例: <![CDATA[]]> </code>
     /// </summary>
     [JsonPropertyName("departmentId")]
     [JsonProperty("departmentId")]
@@ -23,7 +23,7 @@ public class GetInvoiceStockRequest : NuoNuoRequest
     /// 分机号列表（只传分机号时使用）
     /// <code> 必填: N </code>
     /// <code> 长度: 100 </code>
-    /// <code> 示例: 1 </code>
+    /// <code> 示例: <![CDATA[1]]> </code>
     /// </summary>
     [JsonPropertyName("extensionNums")]
     [JsonProperty("extensionNums")]
@@ -34,7 +34,7 @@ public class GetInvoiceStockRequest : NuoNuoRequest
     /// 机器编号单个查询（只传机器编号时使用）
     /// <code> 必填: N </code>
     /// <code> 长度: 12 </code>
-    /// <code> 示例: 123456789012 </code>
+    /// <code> 示例: <![CDATA[123456789012]]> </code>
     /// </summary>
     [JsonPropertyName("machineCode")]
     [JsonProperty("machineCode")]
@@ -45,7 +45,7 @@ public class GetInvoiceStockRequest : NuoNuoRequest
     /// 分机号+机器编号联合查询（只能传入一对分机号和机器编号），精确查询某设备时建议使用此种方式
     /// <code> 必填: N </code>
     /// <code> 长度: 1 </code>
-    /// <code> 示例:  </code>
+    /// <code> 示例: <![CDATA[]]> </code>
     /// </summary>
     [JsonPropertyName("extMachineCodePairs")]
     [JsonProperty("extMachineCodePairs")]
@@ -58,7 +58,7 @@ public class GetInvoiceStockRequest : NuoNuoRequest
         /// 分机号
         /// <code> 必填: N </code>
         /// <code> 长度: 5 </code>
-        /// <code> 示例: 1 </code>
+        /// <code> 示例: <![CDATA[1]]> </code>
         /// </summary>
         [JsonPropertyName("extensionNum")]
         [JsonProperty("extensionNum")]
@@ -69,7 +69,7 @@ public class GetInvoiceStockRequest : NuoNuoRequest
         /// 机器编号
         /// <code> 必填: N </code>
         /// <code> 长度: 12 </code>
-        /// <code> 示例: 123456789012 </code>
+        /// <code> 示例: <![CDATA[123456789012]]> </code>
         /// </summary>
         [JsonPropertyName("machineCode")]
         [JsonProperty("machineCode")]

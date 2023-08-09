@@ -10,7 +10,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
     {
         /// <summary>
         /// 发票请求流水号
-        /// <code> 示例: 19010211130401000006 </code>
+        /// <code> 示例: <![CDATA[19010211130401000006]]> </code>
         /// </summary>
         [JsonPropertyName("serialNo")]
         [JsonProperty("serialNo")]
@@ -19,7 +19,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
         /// <summary>
         /// 订单编号
-        /// <code> 示例: 1001000011161 </code>
+        /// <code> 示例: <![CDATA[1001000011161]]> </code>
         /// </summary>
         [JsonPropertyName("orderNo")]
         [JsonProperty("orderNo")]
@@ -28,7 +28,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
         /// <summary>
         /// 发票状态： 2 :开票完成（ 最终状 态），其他状态分别为: 20:开票中; 21:开票成功签章中;22:开票失败;24: 开票成功签章失败;3:发票已作废 31: 发票作废中 备注：22、24状态时，无需再查询，请确认开票失败原因以及签章失败原因； 注：请以该状态码区分发票状态
-        /// <code> 示例: 2 </code>
+        /// <code> 示例: <![CDATA[2]]> </code>
         /// </summary>
         [JsonPropertyName("status")]
         [JsonProperty("status")]
@@ -37,7 +37,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
         /// <summary>
         /// 发票状态描述
-        /// <code> 示例: 开票完成（最终状态） </code>
+        /// <code> 示例: <![CDATA[开票完成（最终状态）]]> </code>
         /// </summary>
         [JsonPropertyName("statusMsg")]
         [JsonProperty("statusMsg")]
@@ -46,7 +46,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
         /// <summary>
         /// 失败原因
-        /// <code> 示例:  </code>
+        /// <code> 示例: <![CDATA[]]> </code>
         /// </summary>
         [JsonPropertyName("failCause")]
         [JsonProperty("failCause")]
@@ -55,7 +55,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
         /// <summary>
         /// 发票pdf地址（若同时返回了ofdUrl与pdfUrl，则pdf文件不能做为原始凭证，请用ofd文件做为原始凭证）
-        /// <code> 示例: https://invtest.jss.com.cn/group1/M00/0D/A4/wKjScVwsK6CAFzLgAABsVO-OKaE630.pdf </code>
+        /// <code> 示例: <![CDATA[https://invtest.jss.com.cn/group1/M00/0D/A4/wKjScVwsK6CAFzLgAABsVO-OKaE630.pdf]]> </code>
         /// </summary>
         [JsonPropertyName("pdfUrl")]
         [JsonProperty("pdfUrl")]
@@ -64,7 +64,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
         /// <summary>
         /// 发票图片地址
-        /// <code> 示例: nnfpkf.jss.com.cn/ArQ6dFE3-9o5x4B </code>
+        /// <code> 示例: <![CDATA[nnfpkf.jss.com.cn/ArQ6dFE3-9o5x4B]]> </code>
         /// </summary>
         [JsonPropertyName("pictureUrl")]
         [JsonProperty("pictureUrl")]
@@ -73,7 +73,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
         /// <summary>
         /// 开票时间
-        /// <code> 示例: 1546398919000 </code>
+        /// <code> 示例: <![CDATA[1546398919000]]> </code>
         /// </summary>
         [JsonPropertyName("invoiceTime")]
         [JsonProperty("invoiceTime")]
@@ -82,7 +82,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
         /// <summary>
         /// 发票代码（数电电票时为空，数电纸票时有值）
-        /// <code> 示例: 131880930199 </code>
+        /// <code> 示例: <![CDATA[131880930199]]> </code>
         /// </summary>
         [JsonPropertyName("invoiceCode")]
         [JsonProperty("invoiceCode")]
@@ -91,7 +91,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
         /// <summary>
         /// 发票号码（数电电票时返回原来的20位数电票号码，数电纸票时为8位的纸票号码）
-        /// <code> 示例: 19902643 </code>
+        /// <code> 示例: <![CDATA[19902643]]> </code>
         /// </summary>
         [JsonPropertyName("invoiceNo")]
         [JsonProperty("invoiceNo")]
@@ -100,7 +100,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
         /// <summary>
         /// allElectronicInvoiceNumber 数电票号码（数电电票、数电纸票时均返回20位数电票号码）
-        /// <code> 示例: 22310000000000000001 </code>
+        /// <code> 示例: <![CDATA[22310000000000000001]]> </code>
         /// </summary>
         [JsonPropertyName("allElectronicInvoiceNumbe")]
         [JsonProperty("allElectronicInvoiceNumbe")]
@@ -109,7 +109,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
         /// <summary>
         /// 不含税金额
-        /// <code> 示例: 0.38 </code>
+        /// <code> 示例: <![CDATA[0.38]]> </code>
         /// </summary>
         [JsonPropertyName("exTaxAmount")]
         [JsonProperty("exTaxAmount")]
@@ -118,7 +118,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
         /// <summary>
         /// 合计税额
-        /// <code> 示例: 0.02 </code>
+        /// <code> 示例: <![CDATA[0.02]]> </code>
         /// </summary>
         [JsonPropertyName("taxAmount")]
         [JsonProperty("taxAmount")]
@@ -127,7 +127,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
         /// <summary>
         /// 价税合计
-        /// <code> 示例: 0.40 </code>
+        /// <code> 示例: <![CDATA[0.40]]> </code>
         /// </summary>
         [JsonPropertyName("orderAmount")]
         [JsonProperty("orderAmount")]
@@ -136,7 +136,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
         /// <summary>
         /// 购方名称（付款方名称）
-        /// <code> 示例: 个人2 </code>
+        /// <code> 示例: <![CDATA[个人2]]> </code>
         /// </summary>
         [JsonPropertyName("payerName")]
         [JsonProperty("payerName")]
@@ -145,7 +145,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
         /// <summary>
         /// 购方税号（付款方税号）
-        /// <code> 示例: 110101TRDX8RQU1 </code>
+        /// <code> 示例: <![CDATA[110101TRDX8RQU1]]> </code>
         /// </summary>
         [JsonPropertyName("payerTaxNo")]
         [JsonProperty("payerTaxNo")]
@@ -154,7 +154,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
         /// <summary>
         /// 购方地址
-        /// <code> 示例: 杭州西湖区 </code>
+        /// <code> 示例: <![CDATA[杭州西湖区]]> </code>
         /// </summary>
         [JsonPropertyName("address")]
         [JsonProperty("address")]
@@ -163,7 +163,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
         /// <summary>
         /// 购方电话
-        /// <code> 示例: 13000000000 </code>
+        /// <code> 示例: <![CDATA[13000000000]]> </code>
         /// </summary>
         [JsonPropertyName("telephone")]
         [JsonProperty("telephone")]
@@ -172,7 +172,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
         /// <summary>
         /// 购方开户行及账号
-        /// <code> 示例: 中国工商银行000001 </code>
+        /// <code> 示例: <![CDATA[中国工商银行000001]]> </code>
         /// </summary>
         [JsonPropertyName("bankAccount")]
         [JsonProperty("bankAccount")]
@@ -181,7 +181,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
         /// <summary>
         /// 发票种类，包含：增值税电子普通发票、增值税普通发票、专用发票(电子)、增值税专用发票、收购发票(电子)、收购发票(纸质)、增值税普通发票(卷式)、机动车销售统一发票、二手车销售统一发票、电子发票(增值税专用发票)、电子发票(普通发票)、全电纸质发票(增值税专用发票)、全电纸质发票(普通发票)； 备注：电子发票(增值税专用发票)即 数电专票(电子)，电子发票(普通发票)即 数电普票(电子)
-        /// <code> 示例: 增值税电子普通发票 </code>
+        /// <code> 示例: <![CDATA[增值税电子普通发票]]> </code>
         /// </summary>
         [JsonPropertyName("invoiceKind")]
         [JsonProperty("invoiceKind")]
@@ -190,7 +190,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
         /// <summary>
         /// 校验码（数电票时为空）
-        /// <code> 示例: 72969719882523170140 </code>
+        /// <code> 示例: <![CDATA[72969719882523170140]]> </code>
         /// </summary>
         [JsonPropertyName("checkCode")]
         [JsonProperty("checkCode")]
@@ -199,7 +199,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
         /// <summary>
         /// 二维码
-        /// <code> 示例:  </code>
+        /// <code> 示例: <![CDATA[]]> </code>
         /// </summary>
         [JsonPropertyName("qrCode")]
         [JsonProperty("qrCode")]
@@ -208,7 +208,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
         /// <summary>
         /// 税控设备号（机器编码）；数电票时为空
-        /// <code> 示例:  </code>
+        /// <code> 示例: <![CDATA[]]> </code>
         /// </summary>
         [JsonPropertyName("machineCode")]
         [JsonProperty("machineCode")]
@@ -217,7 +217,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
         /// <summary>
         /// 发票密文（数电票时为空）
-        /// <code> 示例:  </code>
+        /// <code> 示例: <![CDATA[]]> </code>
         /// </summary>
         [JsonPropertyName("cipherText")]
         [JsonProperty("cipherText")]
@@ -226,7 +226,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
         /// <summary>
         /// 含底图纸票pdf地址
-        /// <code> 示例: http://invtest.nntest.cn/group1/M00/01/8B/wKjScV6-P0aAKKPHAAH965KBApQ812.pdf </code>
+        /// <code> 示例: <![CDATA[http://invtest.nntest.cn/group1/M00/01/8B/wKjScV6-P0aAKKPHAAH965KBApQ812.pdf]]> </code>
         /// </summary>
         [JsonPropertyName("paperPdfUrl")]
         [JsonProperty("paperPdfUrl")]
@@ -235,7 +235,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
         /// <summary>
         /// 发票ofd地址（公共服务平台签章及数电电票时返回）
-        /// <code> 示例:  </code>
+        /// <code> 示例: <![CDATA[]]> </code>
         /// </summary>
         [JsonPropertyName("ofdUrl")]
         [JsonProperty("ofdUrl")]
@@ -244,7 +244,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
         /// <summary>
         /// 发票xml地址（数电电票且企业配置成支持获取xml时返回）
-        /// <code> 示例:  </code>
+        /// <code> 示例: <![CDATA[]]> </code>
         /// </summary>
         [JsonPropertyName("xmlUrl")]
         [JsonProperty("xmlUrl")]
@@ -253,7 +253,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
         /// <summary>
         /// 开票员
-        /// <code> 示例: 张三 </code>
+        /// <code> 示例: <![CDATA[张三]]> </code>
         /// </summary>
         [JsonPropertyName("clerk")]
         [JsonProperty("clerk")]
@@ -262,7 +262,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
         /// <summary>
         /// 收款人
-        /// <code> 示例: 李四 </code>
+        /// <code> 示例: <![CDATA[李四]]> </code>
         /// </summary>
         [JsonPropertyName("payee")]
         [JsonProperty("payee")]
@@ -271,7 +271,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
         /// <summary>
         /// 复核人
-        /// <code> 示例: 王五 </code>
+        /// <code> 示例: <![CDATA[王五]]> </code>
         /// </summary>
         [JsonPropertyName("checker")]
         [JsonProperty("checker")]
@@ -280,7 +280,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
         /// <summary>
         /// 销方银行账号
-        /// <code> 示例: 2000098287777 </code>
+        /// <code> 示例: <![CDATA[2000098287777]]> </code>
         /// </summary>
         [JsonPropertyName("salerAccount")]
         [JsonProperty("salerAccount")]
@@ -289,7 +289,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
         /// <summary>
         /// 销方电话
-        /// <code> 示例: 0937-9384 </code>
+        /// <code> 示例: <![CDATA[0937-9384]]> </code>
         /// </summary>
         [JsonPropertyName("salerTel")]
         [JsonProperty("salerTel")]
@@ -298,7 +298,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
         /// <summary>
         /// 销方地址
-        /// <code> 示例: 杭州西湖 </code>
+        /// <code> 示例: <![CDATA[杭州西湖]]> </code>
         /// </summary>
         [JsonPropertyName("salerAddress")]
         [JsonProperty("salerAddress")]
@@ -307,7 +307,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
         /// <summary>
         /// 销方税号
-        /// <code> 示例: 150301199811285326 </code>
+        /// <code> 示例: <![CDATA[150301199811285326]]> </code>
         /// </summary>
         [JsonPropertyName("salerTaxNum")]
         [JsonProperty("salerTaxNum")]
@@ -316,7 +316,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
         /// <summary>
         /// 销方名称
-        /// <code> 示例: 浙江诺诺网 </code>
+        /// <code> 示例: <![CDATA[浙江诺诺网]]> </code>
         /// </summary>
         [JsonPropertyName("saleName")]
         [JsonProperty("saleName")]
@@ -325,7 +325,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
         /// <summary>
         /// 备注
-        /// <code> 示例: 备注mlk </code>
+        /// <code> 示例: <![CDATA[备注mlk]]> </code>
         /// </summary>
         [JsonPropertyName("remark")]
         [JsonProperty("remark")]
@@ -334,7 +334,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
         /// <summary>
         /// 成品油标志：0非成品油，1成品油
-        /// <code> 示例: 0 </code>
+        /// <code> 示例: <![CDATA[0]]> </code>
         /// </summary>
         [JsonPropertyName("productOilFlag")]
         [JsonProperty("productOilFlag")]
@@ -343,7 +343,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
         /// <summary>
         /// 图片地址（多个图片以逗号隔开）
-        /// <code> 示例: http://invtest.nntest.cn/group1/M00/01/8B/wKjScV6-P0WAHjKkAAC17-oX9RE037.jpg </code>
+        /// <code> 示例: <![CDATA[http://invtest.nntest.cn/group1/M00/01/8B/wKjScV6-P0WAHjKkAAC17-oX9RE037.jpg]]> </code>
         /// </summary>
         [JsonPropertyName("imgUrls")]
         [JsonProperty("imgUrls")]
@@ -352,7 +352,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
         /// <summary>
         /// 分机号
-        /// <code> 示例: 1 </code>
+        /// <code> 示例: <![CDATA[1]]> </code>
         /// </summary>
         [JsonPropertyName("extensionNumber")]
         [JsonProperty("extensionNumber")]
@@ -361,7 +361,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
         /// <summary>
         /// 终端号
-        /// <code> 示例:  </code>
+        /// <code> 示例: <![CDATA[]]> </code>
         /// </summary>
         [JsonPropertyName("terminalNumber")]
         [JsonProperty("terminalNumber")]
@@ -370,7 +370,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
         /// <summary>
         /// 部门门店id（诺诺系统中的id）
-        /// <code> 示例: 001 </code>
+        /// <code> 示例: <![CDATA[001]]> </code>
         /// </summary>
         [JsonPropertyName("deptId")]
         [JsonProperty("deptId")]
@@ -379,7 +379,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
         /// <summary>
         /// 开票员id（诺诺系统中的id）
-        /// <code> 示例: 001 </code>
+        /// <code> 示例: <![CDATA[001]]> </code>
         /// </summary>
         [JsonPropertyName("clerkId")]
         [JsonProperty("clerkId")]
@@ -388,7 +388,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
         /// <summary>
         /// 对应蓝票发票代码，红票时有值（蓝票为数电电票时为空，数电纸票时有值）
-        /// <code> 示例:  </code>
+        /// <code> 示例: <![CDATA[]]> </code>
         /// </summary>
         [JsonPropertyName("oldInvoiceCode")]
         [JsonProperty("oldInvoiceCode")]
@@ -397,7 +397,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
         /// <summary>
         /// 对应蓝票发票号码，红票时有值（蓝票为数电电票时返回原来的20位数电票号码，数电纸票时为8位的纸票号码）
-        /// <code> 示例:  </code>
+        /// <code> 示例: <![CDATA[]]> </code>
         /// </summary>
         [JsonPropertyName("oldInvoiceNo")]
         [JsonProperty("oldInvoiceNo")]
@@ -406,7 +406,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
         /// <summary>
         /// 对应蓝票数电票号码，红票时有值（蓝票为数电票（电子+纸质）时 20位）
-        /// <code> 示例:  </code>
+        /// <code> 示例: <![CDATA[]]> </code>
         /// </summary>
         [JsonPropertyName("oldEleInvoiceNumber")]
         [JsonProperty("oldEleInvoiceNumber")]
@@ -415,7 +415,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
         /// <summary>
         /// 清单标志:0,非清单;1,清单票
-        /// <code> 示例: 0 </code>
+        /// <code> 示例: <![CDATA[0]]> </code>
         /// </summary>
         [JsonPropertyName("listFlag")]
         [JsonProperty("listFlag")]
@@ -424,7 +424,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
         /// <summary>
         /// 清单项目名称:打印清单时对应发票票面项目名称，注意：税总要求清单项目名称为（详见销货清单）
-        /// <code> 示例:  </code>
+        /// <code> 示例: <![CDATA[]]> </code>
         /// </summary>
         [JsonPropertyName("listName")]
         [JsonProperty("listName")]
@@ -433,7 +433,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
         /// <summary>
         /// 购方手机(开票成功会短信提醒购方)
-        /// <code> 示例:  </code>
+        /// <code> 示例: <![CDATA[]]> </code>
         /// </summary>
         [JsonPropertyName("phone")]
         [JsonProperty("phone")]
@@ -442,7 +442,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
         /// <summary>
         /// 购方邮箱推送邮箱(开票成功会邮件提醒购方)
-        /// <code> 示例:  </code>
+        /// <code> 示例: <![CDATA[]]> </code>
         /// </summary>
         [JsonPropertyName("notifyEmail")]
         [JsonProperty("notifyEmail")]
@@ -451,7 +451,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
         /// <summary>
         /// 是否机动车类专票 0-否 1-是
-        /// <code> 示例: 0 </code>
+        /// <code> 示例: <![CDATA[0]]> </code>
         /// </summary>
         [JsonPropertyName("vehicleFlag")]
         [JsonProperty("vehicleFlag")]
@@ -460,7 +460,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
         /// <summary>
         /// 数据创建时间（回传其他信息时返回）
-        /// <code> 示例:  </code>
+        /// <code> 示例: <![CDATA[]]> </code>
         /// </summary>
         [JsonPropertyName("createTime")]
         [JsonProperty("createTime")]
@@ -469,7 +469,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
         /// <summary>
         /// 数据更新时间（回传其他信息时返回）
-        /// <code> 示例:  </code>
+        /// <code> 示例: <![CDATA[]]> </code>
         /// </summary>
         [JsonPropertyName("updateTime")]
         [JsonProperty("updateTime")]
@@ -478,7 +478,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
         /// <summary>
         /// 发票状态更新时间（回传其他信息时返回；涉及状态：开票中、开票失败、开票成功签章中、开票成功签章失败、开票完成、发票作废中、发票已作废）
-        /// <code> 示例:  </code>
+        /// <code> 示例: <![CDATA[]]> </code>
         /// </summary>
         [JsonPropertyName("stateUpdateTime")]
         [JsonProperty("stateUpdateTime")]
@@ -487,7 +487,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
         /// <summary>
         /// 代开标志 0-非代开 1-代开（回传其他信息时返回）
-        /// <code> 示例:  </code>
+        /// <code> 示例: <![CDATA[]]> </code>
         /// </summary>
         [JsonPropertyName("proxyInvoiceFlag")]
         [JsonProperty("proxyInvoiceFlag")]
@@ -496,7 +496,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
         /// <summary>
         /// 用于开票的订单的时间（回传其他信息时返回）
-        /// <code> 示例:  </code>
+        /// <code> 示例: <![CDATA[]]> </code>
         /// </summary>
         [JsonPropertyName("invoiceDate")]
         [JsonProperty("invoiceDate")]
@@ -505,7 +505,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
         /// <summary>
         /// 开票类型 1-蓝票 2-红票（回传其他信息时返回）
-        /// <code> 示例: 1 </code>
+        /// <code> 示例: <![CDATA[1]]> </code>
         /// </summary>
         [JsonPropertyName("invoiceType")]
         [JsonProperty("invoiceType")]
@@ -514,7 +514,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
         /// <summary>
         /// 冲红原因 1:销货退回;2:开票有误;3:服务中止;4:发生销售折让（红票且票种为p、c、e、f、r（成品油发票除外）且回传其他信息时返回）
-        /// <code> 示例: 1 </code>
+        /// <code> 示例: <![CDATA[1]]> </code>
         /// </summary>
         [JsonPropertyName("redReason")]
         [JsonProperty("redReason")]
@@ -523,7 +523,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
         /// <summary>
         /// 作废时间（已作废状态下的发票，且回传其他信息时返回）
-        /// <code> 示例: 1625475746 </code>
+        /// <code> 示例: <![CDATA[1625475746]]> </code>
         /// </summary>
         [JsonPropertyName("invalidTime")]
         [JsonProperty("invalidTime")]
@@ -532,7 +532,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
         /// <summary>
         /// 作废来源 1-诺诺工作台 2-API接口 3-开票软件 4-验签失败作废 5-其他（已作废状态下的发票，且回传其他信息时返回）
-        /// <code> 示例: 1 </code>
+        /// <code> 示例: <![CDATA[1]]> </code>
         /// </summary>
         [JsonPropertyName("invalidSource")]
         [JsonProperty("invalidSource")]
@@ -541,7 +541,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
         /// <summary>
         /// 数电纸票作废原因 1:销货退回;2:开票有误;3:服务中止;4:其他（已作废状态下的发票，且票为数电纸票且回传其他信息时返回）
-        /// <code> 示例:  </code>
+        /// <code> 示例: <![CDATA[]]> </code>
         /// </summary>
         [JsonPropertyName("invalidReason")]
         [JsonProperty("invalidReason")]
@@ -550,7 +550,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
         /// <summary>
         /// 其他作废原因详情（作废原因为4 且回传其他信息时返回）
-        /// <code> 示例:  </code>
+        /// <code> 示例: <![CDATA[]]> </code>
         /// </summary>
         [JsonPropertyName("specificReason")]
         [JsonProperty("specificReason")]
@@ -559,7 +559,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
         /// <summary>
         /// 发票特定要素：（后续枚举值会有扩展，回传其他信息时返回）0-普通 1-成品油发票 3-建筑服务 4-货物运输服务 6-不动产经营租赁服务 9-旅客运输服务 16-农产品收购 31-建安发票 32-房地产销售发票 33-二手车发票反向开具 34-电子烟 35-矿产品
-        /// <code> 示例: 0 </code>
+        /// <code> 示例: <![CDATA[0]]> </code>
         /// </summary>
         [JsonPropertyName("specificFactor")]
         [JsonProperty("specificFactor")]
@@ -568,7 +568,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
         /// <summary>
         /// 邮箱交付状态（0-未交付，1-交付成功，2-交付失败，3-交付中，4-不会交付；注：回传其他信息时返回）
-        /// <code> 示例:  </code>
+        /// <code> 示例: <![CDATA[]]> </code>
         /// </summary>
         [JsonPropertyName("emailNotifyStatus")]
         [JsonProperty("emailNotifyStatus")]
@@ -577,7 +577,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
         /// <summary>
         /// 手机交付状态（0-未交付，1-交付成功，2-交付失败，3-交付中，4-不会交付；注：回传其他信息时返回）
-        /// <code> 示例:  </code>
+        /// <code> 示例: <![CDATA[]]> </code>
         /// </summary>
         [JsonPropertyName("phoneNotifyStatus")]
         [JsonProperty("phoneNotifyStatus")]
@@ -586,7 +586,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
         /// <summary>
         /// 购买方经办人姓名（数电票特有字段）
-        /// <code> 示例: 张三 </code>
+        /// <code> 示例: <![CDATA[张三]]> </code>
         /// </summary>
         [JsonPropertyName("buyerManagerName")]
         [JsonProperty("buyerManagerName")]
@@ -595,7 +595,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
         /// <summary>
         /// 经办人证件类型：101-组织机构代码证, 102-营业执照, 103-税务登记证, 199-其他单位证件, 201-居民身份证, 202-军官证, 203-武警警官证, 204-士兵证, 205-军队离退休干部证, 206-残疾人证, 207-残疾军人证（1-8级）, 208-外国护照, 210-港澳居民来往内地通行证, 212-中华人民共和国往来港澳通行证, 213-台湾居民来往大陆通行证, 214-大陆居民往来台湾通行证, 215-外国人居留证, 216-外交官证 299-其他个人证件(数电票特有)
-        /// <code> 示例: 201 </code>
+        /// <code> 示例: <![CDATA[201]]> </code>
         /// </summary>
         [JsonPropertyName("managerCardType")]
         [JsonProperty("managerCardType")]
@@ -604,7 +604,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
         /// <summary>
         /// 经办人证件号码（数电票特有字段）
-        /// <code> 示例:  </code>
+        /// <code> 示例: <![CDATA[]]> </code>
         /// </summary>
         [JsonPropertyName("managerCardNo")]
         [JsonProperty("managerCardNo")]
@@ -613,7 +613,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
         /// <summary>
         /// 业务方自定义字段1
-        /// <code> 示例:  </code>
+        /// <code> 示例: <![CDATA[]]> </code>
         /// </summary>
         [JsonPropertyName("bField1")]
         [JsonProperty("bField1")]
@@ -622,7 +622,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
         /// <summary>
         /// 业务方自定义字段2
-        /// <code> 示例:  </code>
+        /// <code> 示例: <![CDATA[]]> </code>
         /// </summary>
         [JsonPropertyName("bField2")]
         [JsonProperty("bField2")]
@@ -631,7 +631,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
         /// <summary>
         /// 业务方自定义字段3
-        /// <code> 示例:  </code>
+        /// <code> 示例: <![CDATA[]]> </code>
         /// </summary>
         [JsonPropertyName("bField3")]
         [JsonProperty("bField3")]
@@ -640,7 +640,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
         /// <summary>
         /// 购买方自然人标志：0-否，1-是（数电普票（电子）时才有可能返回，为1时，版式文件上在购方名称最后面会额外显示 （个人） ）
-        /// <code> 示例:  </code>
+        /// <code> 示例: <![CDATA[]]> </code>
         /// </summary>
         [JsonPropertyName("naturalPersonFlag")]
         [JsonProperty("naturalPersonFlag")]
@@ -649,7 +649,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
         /// <summary>
         /// 发票明细集合
-        /// <code> 示例:  </code>
+        /// <code> 示例: <![CDATA[]]> </code>
         /// </summary>
         [JsonPropertyName("invoiceItems")]
         [JsonProperty("invoiceItems")]
@@ -660,7 +660,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
         {
             /// <summary>
             /// 商品名称(项目名称)
-            /// <code> 示例: 门票 </code>
+            /// <code> 示例: <![CDATA[门票]]> </code>
             /// </summary>
             [JsonPropertyName("itemName")]
             [JsonProperty("itemName")]
@@ -669,7 +669,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
             /// <summary>
             /// 简称
-            /// <code> 示例: 旅游服务 </code>
+            /// <code> 示例: <![CDATA[旅游服务]]> </code>
             /// </summary>
             [JsonPropertyName("itemCodeAbb")]
             [JsonProperty("itemCodeAbb")]
@@ -678,7 +678,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
             /// <summary>
             /// 单位
-            /// <code> 示例: 张 </code>
+            /// <code> 示例: <![CDATA[张]]> </code>
             /// </summary>
             [JsonPropertyName("itemUnit")]
             [JsonProperty("itemUnit")]
@@ -687,7 +687,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
             /// <summary>
             /// 单价（isIncludeTax=true，是含税单价；isIncludeTax=false，是不含税单价）
-            /// <code> 示例: 0.300000000000000000 </code>
+            /// <code> 示例: <![CDATA[0.300000000000000000]]> </code>
             /// </summary>
             [JsonPropertyName("itemPrice")]
             [JsonProperty("itemPrice")]
@@ -696,7 +696,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
             /// <summary>
             /// 税率，注：纸票清单红票存在为null的情况
-            /// <code> 示例: 0.06 </code>
+            /// <code> 示例: <![CDATA[0.06]]> </code>
             /// </summary>
             [JsonPropertyName("itemTaxRate")]
             [JsonProperty("itemTaxRate")]
@@ -705,7 +705,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
             /// <summary>
             /// 数量
-            /// <code> 示例: 2.000000000000000000 </code>
+            /// <code> 示例: <![CDATA[2.000000000000000000]]> </code>
             /// </summary>
             [JsonPropertyName("itemNum")]
             [JsonProperty("itemNum")]
@@ -714,7 +714,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
             /// <summary>
             /// 金额（isIncludeTax=true，是含税金额；isIncludeTax=false，是不含税金额）
-            /// <code> 示例: 0.60 </code>
+            /// <code> 示例: <![CDATA[0.60]]> </code>
             /// </summary>
             [JsonPropertyName("itemAmount")]
             [JsonProperty("itemAmount")]
@@ -723,7 +723,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
             /// <summary>
             /// 税额
-            /// <code> 示例: 0.03 </code>
+            /// <code> 示例: <![CDATA[0.03]]> </code>
             /// </summary>
             [JsonPropertyName("itemTaxAmount")]
             [JsonProperty("itemTaxAmount")]
@@ -732,7 +732,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
             /// <summary>
             /// 规格型号
-            /// <code> 示例:  </code>
+            /// <code> 示例: <![CDATA[]]> </code>
             /// </summary>
             [JsonPropertyName("itemSpec")]
             [JsonProperty("itemSpec")]
@@ -741,7 +741,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
             /// <summary>
             /// 商品编码
-            /// <code> 示例: 3070101000000000000 </code>
+            /// <code> 示例: <![CDATA[3070101000000000000]]> </code>
             /// </summary>
             [JsonPropertyName("itemCode")]
             [JsonProperty("itemCode")]
@@ -750,7 +750,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
             /// <summary>
             /// 自行编码
-            /// <code> 示例:  </code>
+            /// <code> 示例: <![CDATA[]]> </code>
             /// </summary>
             [JsonPropertyName("itemSelfCode")]
             [JsonProperty("itemSelfCode")]
@@ -759,7 +759,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
             /// <summary>
             /// 含税标识 true：含税 false：不含税
-            /// <code> 示例: true </code>
+            /// <code> 示例: <![CDATA[true]]> </code>
             /// </summary>
             [JsonPropertyName("isIncludeTax")]
             [JsonProperty("isIncludeTax")]
@@ -768,7 +768,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
             /// <summary>
             /// 发票行性质0, 正常行;1,折扣行;2,被扣行
-            /// <code> 示例: 2 </code>
+            /// <code> 示例: <![CDATA[2]]> </code>
             /// </summary>
             [JsonPropertyName("invoiceLineProperty")]
             [JsonProperty("invoiceLineProperty")]
@@ -777,7 +777,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
             /// <summary>
             /// 零税率标识:空：非零税率，1：免税，2：不征税，3：普通零税率；（数电票时为空）
-            /// <code> 示例:  </code>
+            /// <code> 示例: <![CDATA[]]> </code>
             /// </summary>
             [JsonPropertyName("zeroRateFlag")]
             [JsonProperty("zeroRateFlag")]
@@ -786,7 +786,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
             /// <summary>
             /// 优惠政策名称（增值税特殊管理）；数电票时为空
-            /// <code> 示例:  </code>
+            /// <code> 示例: <![CDATA[]]> </code>
             /// </summary>
             [JsonPropertyName("favouredPolicyName")]
             [JsonProperty("favouredPolicyName")]
@@ -795,7 +795,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
             /// <summary>
             /// 优惠政策标识:0：不使用;1：使用；（数电票时： 01：简易征收 02：稀土产品 03：免税 04：不征税 05：先征后退 06：100%先征后退 07：50%先征后退 08：按3%简易征收 09：按5%简易征收 10：按5%简易征收减按1.5%计征 11：即征即退30% 12：即征即退50% 13：即征即退70% 14：即征即退100% 15：超税负3%即征即退 16：超税负8%即征即退 17：超税负12%即征即退 18：超税负6%即征即退）
-            /// <code> 示例: 0 </code>
+            /// <code> 示例: <![CDATA[0]]> </code>
             /// </summary>
             [JsonPropertyName("favouredPolicyFlag")]
             [JsonProperty("favouredPolicyFlag")]
@@ -804,7 +804,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
             /// <summary>
             /// 扣除额，小数点后两位。差额票时有值
-            /// <code> 示例:  </code>
+            /// <code> 示例: <![CDATA[]]> </code>
             /// </summary>
             [JsonPropertyName("deduction")]
             [JsonProperty("deduction")]
@@ -813,7 +813,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
             /// <summary>
             /// 业务方明细自定义字段1
-            /// <code> 示例:  </code>
+            /// <code> 示例: <![CDATA[]]> </code>
             /// </summary>
             [JsonPropertyName("dField1")]
             [JsonProperty("dField1")]
@@ -822,7 +822,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
             /// <summary>
             /// 业务方明细自定义字段2
-            /// <code> 示例:  </code>
+            /// <code> 示例: <![CDATA[]]> </code>
             /// </summary>
             [JsonPropertyName("dField2")]
             [JsonProperty("dField2")]
@@ -831,7 +831,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
             /// <summary>
             /// 业务方明细自定义字段3
-            /// <code> 示例:  </code>
+            /// <code> 示例: <![CDATA[]]> </code>
             /// </summary>
             [JsonPropertyName("dField3")]
             [JsonProperty("dField3")]
@@ -840,7 +840,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
             /// <summary>
             /// 业务方明细自定义字段4
-            /// <code> 示例:  </code>
+            /// <code> 示例: <![CDATA[]]> </code>
             /// </summary>
             [JsonPropertyName("dField4")]
             [JsonProperty("dField4")]
@@ -849,7 +849,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
             /// <summary>
             /// 业务方明细自定义字段5
-            /// <code> 示例:  </code>
+            /// <code> 示例: <![CDATA[]]> </code>
             /// </summary>
             [JsonPropertyName("dField5")]
             [JsonProperty("dField5")]
@@ -858,7 +858,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
         }
         /// <summary>
         /// 机动车销售统一发票中机动车相关信息（只有机动车销售统一发票才会返回）
-        /// <code> 示例:  </code>
+        /// <code> 示例: <![CDATA[]]> </code>
         /// </summary>
         [JsonPropertyName("vehicleInfo")]
         [JsonProperty("vehicleInfo")]
@@ -869,7 +869,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
         {
             /// <summary>
             /// 机动车类型
-            /// <code> 示例: 轿车 </code>
+            /// <code> 示例: <![CDATA[轿车]]> </code>
             /// </summary>
             [JsonPropertyName("vehicleType")]
             [JsonProperty("vehicleType")]
@@ -878,7 +878,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
             /// <summary>
             /// 厂牌型号
-            /// <code> 示例: 宝马3系 </code>
+            /// <code> 示例: <![CDATA[宝马3系]]> </code>
             /// </summary>
             [JsonPropertyName("brandModel")]
             [JsonProperty("brandModel")]
@@ -887,7 +887,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
             /// <summary>
             /// 原产地
-            /// <code> 示例: 北京 </code>
+            /// <code> 示例: <![CDATA[北京]]> </code>
             /// </summary>
             [JsonPropertyName("productOrigin")]
             [JsonProperty("productOrigin")]
@@ -896,7 +896,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
             /// <summary>
             /// 合格证号
-            /// <code> 示例: WDL042613263551 </code>
+            /// <code> 示例: <![CDATA[WDL042613263551]]> </code>
             /// </summary>
             [JsonPropertyName("certificate")]
             [JsonProperty("certificate")]
@@ -905,7 +905,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
             /// <summary>
             /// 进出口证明书号
-            /// <code> 示例:  </code>
+            /// <code> 示例: <![CDATA[]]> </code>
             /// </summary>
             [JsonPropertyName("importCerNum")]
             [JsonProperty("importCerNum")]
@@ -914,7 +914,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
             /// <summary>
             /// 商检单码
-            /// <code> 示例:  </code>
+            /// <code> 示例: <![CDATA[]]> </code>
             /// </summary>
             [JsonPropertyName("insOddNum")]
             [JsonProperty("insOddNum")]
@@ -923,7 +923,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
             /// <summary>
             /// 发动机号码
-            /// <code> 示例:  </code>
+            /// <code> 示例: <![CDATA[]]> </code>
             /// </summary>
             [JsonPropertyName("engineNum")]
             [JsonProperty("engineNum")]
@@ -932,7 +932,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
             /// <summary>
             /// 车辆识别号码/机动车号码（车架号）
-            /// <code> 示例: LHGK43284342384234 </code>
+            /// <code> 示例: <![CDATA[LHGK43284342384234]]> </code>
             /// </summary>
             [JsonPropertyName("vehicleCode")]
             [JsonProperty("vehicleCode")]
@@ -941,7 +941,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
             /// <summary>
             /// 完税证明号码
-            /// <code> 示例:  </code>
+            /// <code> 示例: <![CDATA[]]> </code>
             /// </summary>
             [JsonPropertyName("intactCerNum")]
             [JsonProperty("intactCerNum")]
@@ -950,7 +950,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
             /// <summary>
             /// 吨位
-            /// <code> 示例: 3 </code>
+            /// <code> 示例: <![CDATA[3]]> </code>
             /// </summary>
             [JsonPropertyName("tonnage")]
             [JsonProperty("tonnage")]
@@ -959,7 +959,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
             /// <summary>
             /// 限乘人数
-            /// <code> 示例: 5 </code>
+            /// <code> 示例: <![CDATA[5]]> </code>
             /// </summary>
             [JsonPropertyName("maxCapacity")]
             [JsonProperty("maxCapacity")]
@@ -968,7 +968,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
             /// <summary>
             /// 主管税务机关代码
-            /// <code> 示例: 13399000 </code>
+            /// <code> 示例: <![CDATA[13399000]]> </code>
             /// </summary>
             [JsonPropertyName("taxOfficeCode")]
             [JsonProperty("taxOfficeCode")]
@@ -977,7 +977,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
             /// <summary>
             /// 主管税务机关名称
-            /// <code> 示例: 杭州税务 </code>
+            /// <code> 示例: <![CDATA[杭州税务]]> </code>
             /// </summary>
             [JsonPropertyName("taxOfficeName")]
             [JsonProperty("taxOfficeName")]
@@ -986,7 +986,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
             /// <summary>
             /// 身份证号码或组织机构代码（2021新版机动车发票时为空）
-            /// <code> 示例: 9114010034683511XD </code>
+            /// <code> 示例: <![CDATA[9114010034683511XD]]> </code>
             /// </summary>
             [JsonPropertyName("idNumOrgCode")]
             [JsonProperty("idNumOrgCode")]
@@ -995,7 +995,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
             /// <summary>
             /// 生产厂家
-            /// <code> 示例: 华晨宝马汽车生产有限公司 </code>
+            /// <code> 示例: <![CDATA[华晨宝马汽车生产有限公司]]> </code>
             /// </summary>
             [JsonPropertyName("manufacturerName")]
             [JsonProperty("manufacturerName")]
@@ -1004,7 +1004,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
         }
         /// <summary>
         /// 二手车销售统一发票时才有值返回
-        /// <code> 示例:  </code>
+        /// <code> 示例: <![CDATA[]]> </code>
         /// </summary>
         [JsonPropertyName("secondHandCarInfo")]
         [JsonProperty("secondHandCarInfo")]
@@ -1015,7 +1015,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
         {
             /// <summary>
             /// 开票方类型 1：经营单位 2：拍卖单位 3：二手车市场
-            /// <code> 示例: 1 </code>
+            /// <code> 示例: <![CDATA[1]]> </code>
             /// </summary>
             [JsonPropertyName("organizeType")]
             [JsonProperty("organizeType")]
@@ -1024,7 +1024,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
             /// <summary>
             /// 车辆类型,同明细中商品名称，开具二手车发票时明细有且仅有一行
-            /// <code> 示例: 轿车 </code>
+            /// <code> 示例: <![CDATA[轿车]]> </code>
             /// </summary>
             [JsonPropertyName("vehicleType")]
             [JsonProperty("vehicleType")]
@@ -1033,7 +1033,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
             /// <summary>
             /// 厂牌型号
-            /// <code> 示例: 宝马3系 </code>
+            /// <code> 示例: <![CDATA[宝马3系]]> </code>
             /// </summary>
             [JsonPropertyName("brandModel")]
             [JsonProperty("brandModel")]
@@ -1042,7 +1042,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
             /// <summary>
             /// 车辆识别号码/车架号
-            /// <code> 示例: LHGK43284342384234 </code>
+            /// <code> 示例: <![CDATA[LHGK43284342384234]]> </code>
             /// </summary>
             [JsonPropertyName("vehicleCode")]
             [JsonProperty("vehicleCode")]
@@ -1051,7 +1051,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
             /// <summary>
             /// 完税证明号码
-            /// <code> 示例:  </code>
+            /// <code> 示例: <![CDATA[]]> </code>
             /// </summary>
             [JsonPropertyName("intactCerNum")]
             [JsonProperty("intactCerNum")]
@@ -1060,7 +1060,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
             /// <summary>
             /// 车牌照号
-            /// <code> 示例: 浙A12345 </code>
+            /// <code> 示例: <![CDATA[浙A12345]]> </code>
             /// </summary>
             [JsonPropertyName("licenseNumber")]
             [JsonProperty("licenseNumber")]
@@ -1069,7 +1069,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
             /// <summary>
             /// 登记证号
-            /// <code> 示例: 330022123321 </code>
+            /// <code> 示例: <![CDATA[330022123321]]> </code>
             /// </summary>
             [JsonPropertyName("registerCertNo")]
             [JsonProperty("registerCertNo")]
@@ -1078,7 +1078,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
             /// <summary>
             /// 转入地车管所名称
-            /// <code> 示例: 杭州 </code>
+            /// <code> 示例: <![CDATA[杭州]]> </code>
             /// </summary>
             [JsonPropertyName("vehicleManagementName")]
             [JsonProperty("vehicleManagementName")]
@@ -1087,7 +1087,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
             /// <summary>
             /// 卖方单位/个人名称（开票方类型为1、2时，与销方名称一致）
-            /// <code> 示例: 张三 </code>
+            /// <code> 示例: <![CDATA[张三]]> </code>
             /// </summary>
             [JsonPropertyName("sellerName")]
             [JsonProperty("sellerName")]
@@ -1096,7 +1096,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
             /// <summary>
             /// 卖方单位代码/身份证号码（开票方类型为1、2时，与销方税号一致）
-            /// <code> 示例: 330100199001010000 </code>
+            /// <code> 示例: <![CDATA[330100199001010000]]> </code>
             /// </summary>
             [JsonPropertyName("sellerTaxnum")]
             [JsonProperty("sellerTaxnum")]
@@ -1105,7 +1105,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
             /// <summary>
             /// 卖方单位/个人地址（开票方类型为1、2时，与销方地址一致）
-            /// <code> 示例: 杭州文一路888号 </code>
+            /// <code> 示例: <![CDATA[杭州文一路888号]]> </code>
             /// </summary>
             [JsonPropertyName("sellerAddress")]
             [JsonProperty("sellerAddress")]
@@ -1114,7 +1114,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
             /// <summary>
             /// 卖方单位/个人电话（开票方类型为1、2时，与销方电话一致）
-            /// <code> 示例: 13888888888 </code>
+            /// <code> 示例: <![CDATA[13888888888]]> </code>
             /// </summary>
             [JsonPropertyName("sellerPhone")]
             [JsonProperty("sellerPhone")]
@@ -1123,7 +1123,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
             /// <summary>
             /// 附加模版名称（数电票特有字段）
-            /// <code> 示例: 测试模版 </code>
+            /// <code> 示例: <![CDATA[测试模版]]> </code>
             /// </summary>
             [JsonPropertyName("additionalElementName")]
             [JsonProperty("additionalElementName")]
@@ -1132,7 +1132,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
         }
         /// <summary>
         /// 数电建筑服务特定要素类型的发票时才有值返回（specificFactor为3时）
-        /// <code> 示例:  </code>
+        /// <code> 示例: <![CDATA[]]> </code>
         /// </summary>
         [JsonPropertyName("invoiceBuildingInfo")]
         [JsonProperty("invoiceBuildingInfo")]
@@ -1143,7 +1143,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
         {
             /// <summary>
             /// 建筑服务发生地
-            /// <code> 示例: 浙江省杭州市西湖区 </code>
+            /// <code> 示例: <![CDATA[浙江省杭州市西湖区]]> </code>
             /// </summary>
             [JsonPropertyName("buildingAddress")]
             [JsonProperty("buildingAddress")]
@@ -1152,7 +1152,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
             /// <summary>
             /// 详细地址
-            /// <code> 示例: XXX路一号 </code>
+            /// <code> 示例: <![CDATA[XXX路一号]]> </code>
             /// </summary>
             [JsonPropertyName("detailedAddress")]
             [JsonProperty("detailedAddress")]
@@ -1161,7 +1161,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
             /// <summary>
             /// 土地增值税项目编号
-            /// <code> 示例: WA1231232133 </code>
+            /// <code> 示例: <![CDATA[WA1231232133]]> </code>
             /// </summary>
             [JsonPropertyName("landVatItemNo")]
             [JsonProperty("landVatItemNo")]
@@ -1170,7 +1170,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
             /// <summary>
             /// 建筑项目名称
-            /// <code> 示例: 宇宙城 </code>
+            /// <code> 示例: <![CDATA[宇宙城]]> </code>
             /// </summary>
             [JsonPropertyName("itemName")]
             [JsonProperty("itemName")]
@@ -1179,7 +1179,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
             /// <summary>
             /// 跨地（市）标志（0-否 1-是）
-            /// <code> 示例: 0 </code>
+            /// <code> 示例: <![CDATA[0]]> </code>
             /// </summary>
             [JsonPropertyName("crossCityFlag")]
             [JsonProperty("crossCityFlag")]
@@ -1188,7 +1188,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
         }
         /// <summary>
         /// 数电不动产经营租赁服务特定要素类型的发票时才有值返回（specificFactor 为 6时）
-        /// <code> 示例:  </code>
+        /// <code> 示例: <![CDATA[]]> </code>
         /// </summary>
         [JsonPropertyName("realPropertyRentInfo")]
         [JsonProperty("realPropertyRentInfo")]
@@ -1199,7 +1199,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
         {
             /// <summary>
             /// 不动产地址
-            /// <code> 示例: 浙江省杭州市西湖区 </code>
+            /// <code> 示例: <![CDATA[浙江省杭州市西湖区]]> </code>
             /// </summary>
             [JsonPropertyName("realPropertyAddress")]
             [JsonProperty("realPropertyAddress")]
@@ -1208,7 +1208,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
             /// <summary>
             /// 详细地址
-            /// <code> 示例: XXX路一号 </code>
+            /// <code> 示例: <![CDATA[XXX路一号]]> </code>
             /// </summary>
             [JsonPropertyName("detailAddress")]
             [JsonProperty("detailAddress")]
@@ -1217,7 +1217,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
             /// <summary>
             /// 租赁开始日期
-            /// <code> 示例: 2023-01-01 </code>
+            /// <code> 示例: <![CDATA[2023-01-01]]> </code>
             /// </summary>
             [JsonPropertyName("rentStartDate")]
             [JsonProperty("rentStartDate")]
@@ -1226,7 +1226,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
             /// <summary>
             /// 租赁结束日期
-            /// <code> 示例: 2023-01-30 </code>
+            /// <code> 示例: <![CDATA[2023-01-30]]> </code>
             /// </summary>
             [JsonPropertyName("rentEndDate")]
             [JsonProperty("rentEndDate")]
@@ -1235,7 +1235,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
             /// <summary>
             /// 跨地（市）标志（0-否 1-是）
-            /// <code> 示例: 0 </code>
+            /// <code> 示例: <![CDATA[0]]> </code>
             /// </summary>
             [JsonPropertyName("crossCityFlag")]
             [JsonProperty("crossCityFlag")]
@@ -1244,7 +1244,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
             /// <summary>
             /// 产权证书/不动产权证号
-            /// <code> 示例: 无 </code>
+            /// <code> 示例: <![CDATA[无]]> </code>
             /// </summary>
             [JsonPropertyName("realPropertyCertificate")]
             [JsonProperty("realPropertyCertificate")]
@@ -1253,7 +1253,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
             /// <summary>
             /// 面积单位
-            /// <code> 示例: 平方米 </code>
+            /// <code> 示例: <![CDATA[平方米]]> </code>
             /// </summary>
             [JsonPropertyName("unit")]
             [JsonProperty("unit")]
@@ -1262,7 +1262,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
         }
         /// <summary>
         /// 实际变量名：invoiceTravellerTransportInfoList 数电旅客运输服务特定要素类型的发票时才有值返回（specificFactor 为 9时）
-        /// <code> 示例:  </code>
+        /// <code> 示例: <![CDATA[]]> </code>
         /// </summary>
         [JsonPropertyName("invoiceTravellerTransport")]
         [JsonProperty("invoiceTravellerTransport")]
@@ -1273,7 +1273,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
         {
             /// <summary>
             /// 出行人
-            /// <code> 示例:  </code>
+            /// <code> 示例: <![CDATA[]]> </code>
             /// </summary>
             [JsonPropertyName("traveller")]
             [JsonProperty("traveller")]
@@ -1282,7 +1282,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
             /// <summary>
             /// 出行日期（年-月-日）
-            /// <code> 示例:  </code>
+            /// <code> 示例: <![CDATA[]]> </code>
             /// </summary>
             [JsonPropertyName("travelDate")]
             [JsonProperty("travelDate")]
@@ -1291,7 +1291,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
             /// <summary>
             /// 出行人证件类型（枚举值同经办人身份证件类型）
-            /// <code> 示例:  </code>
+            /// <code> 示例: <![CDATA[]]> </code>
             /// </summary>
             [JsonPropertyName("travellerCardType")]
             [JsonProperty("travellerCardType")]
@@ -1300,7 +1300,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
             /// <summary>
             /// 出行人证件号码
-            /// <code> 示例:  </code>
+            /// <code> 示例: <![CDATA[]]> </code>
             /// </summary>
             [JsonPropertyName("travellerCardNo")]
             [JsonProperty("travellerCardNo")]
@@ -1309,7 +1309,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
             /// <summary>
             /// 出行地
-            /// <code> 示例:  </code>
+            /// <code> 示例: <![CDATA[]]> </code>
             /// </summary>
             [JsonPropertyName("travelPlace")]
             [JsonProperty("travelPlace")]
@@ -1318,7 +1318,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
             /// <summary>
             /// 到达地
-            /// <code> 示例:  </code>
+            /// <code> 示例: <![CDATA[]]> </code>
             /// </summary>
             [JsonPropertyName("arrivePlace")]
             [JsonProperty("arrivePlace")]
@@ -1327,7 +1327,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
             /// <summary>
             /// 交通工具类型（1-飞机 2-火车 3-长途汽车 4-公共交通 5-出租车 6-汽车 7-船舶 9-其他）
-            /// <code> 示例:  </code>
+            /// <code> 示例: <![CDATA[]]> </code>
             /// </summary>
             [JsonPropertyName("vehicleType")]
             [JsonProperty("vehicleType")]
@@ -1336,7 +1336,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
             /// <summary>
             /// 交通工具等级
-            /// <code> 示例:  </code>
+            /// <code> 示例: <![CDATA[]]> </code>
             /// </summary>
             [JsonPropertyName("vehicleLevel")]
             [JsonProperty("vehicleLevel")]
@@ -1345,7 +1345,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
         }
         /// <summary>
         /// 货物运输服务特定要素的数电票时才返回（specificFactor = 4时）最多2000行，至少1行
-        /// <code> 示例:  </code>
+        /// <code> 示例: <![CDATA[]]> </code>
         /// </summary>
         [JsonPropertyName("invoiceGoodsTransports")]
         [JsonProperty("invoiceGoodsTransports")]
@@ -1356,7 +1356,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
         {
             /// <summary>
             /// 运输工具种类：1 铁路运输、2 公路运输、3 水路运输、4 航空运输、5 管道运输
-            /// <code> 示例:  </code>
+            /// <code> 示例: <![CDATA[]]> </code>
             /// </summary>
             [JsonPropertyName("transportTool")]
             [JsonProperty("transportTool")]
@@ -1365,7 +1365,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
             /// <summary>
             /// 运输工具牌号
-            /// <code> 示例:  </code>
+            /// <code> 示例: <![CDATA[]]> </code>
             /// </summary>
             [JsonPropertyName("transportToolNum")]
             [JsonProperty("transportToolNum")]
@@ -1374,7 +1374,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
             /// <summary>
             /// 起运地
-            /// <code> 示例:  </code>
+            /// <code> 示例: <![CDATA[]]> </code>
             /// </summary>
             [JsonPropertyName("origin")]
             [JsonProperty("origin")]
@@ -1383,7 +1383,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
             /// <summary>
             /// 到达地
-            /// <code> 示例:  </code>
+            /// <code> 示例: <![CDATA[]]> </code>
             /// </summary>
             [JsonPropertyName("destination")]
             [JsonProperty("destination")]
@@ -1392,7 +1392,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
             /// <summary>
             /// 货物运输名称
-            /// <code> 示例:  </code>
+            /// <code> 示例: <![CDATA[]]> </code>
             /// </summary>
             [JsonPropertyName("goodsName")]
             [JsonProperty("goodsName")]
@@ -1401,7 +1401,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
         }
         /// <summary>
         /// 附加要素信息列表（数电票特有字段，附加要素信息可以有多个）
-        /// <code> 示例:  </code>
+        /// <code> 示例: <![CDATA[]]> </code>
         /// </summary>
         [JsonPropertyName("additionalElement")]
         [JsonProperty("additionalElement")]
@@ -1412,7 +1412,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
         {
             /// <summary>
             /// 信息名称（数电票特有字段）
-            /// <code> 示例: 信息名称 </code>
+            /// <code> 示例: <![CDATA[信息名称]]> </code>
             /// </summary>
             [JsonPropertyName("elementName")]
             [JsonProperty("elementName")]
@@ -1421,7 +1421,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
             /// <summary>
             /// 信息类型（数电票特有字段）
-            /// <code> 示例: 信息类型 </code>
+            /// <code> 示例: <![CDATA[信息类型]]> </code>
             /// </summary>
             [JsonPropertyName("elementType")]
             [JsonProperty("elementType")]
@@ -1430,7 +1430,7 @@ public class QueryInvoiceResultResponse : NuoNuoResponse<IList<QueryInvoiceResul
 
             /// <summary>
             /// 信息值（数电票特有字段）
-            /// <code> 示例: 信息值 </code>
+            /// <code> 示例: <![CDATA[信息值]]> </code>
             /// </summary>
             [JsonPropertyName("elementValue")]
             [JsonProperty("elementValue")]

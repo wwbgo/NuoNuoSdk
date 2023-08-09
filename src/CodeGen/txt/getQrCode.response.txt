@@ -1,0 +1,12 @@
+﻿result	Object	结果	
+[
+status	String	0-获取二维码中/短信发送中；1-成功；2-失败	1
+message	String	结果信息（获取二维码中/查询成功/失败原因）	查询成功
+taxNum	String	税号	339901999999199
+extensionNumber	String	分机号	100
+qrCodeType	String	二维码类型 1:登录扫码认证多源二维码（用微信/支付宝进行扫码 进行登录） 2:登录扫码认证税务APP二维码（用对应地区的税务app扫码 进行登录） 3:登录扫码认证电子营业执照二维码（用对应地区的电子营业执照app或小程序扫码 进行登录） 4:开票实人认证二维码 （用对应地区的税务app扫码 进行实人认证）	2
+qrCode	String	登录扫码认证 或 开票实人认证 的二维qrcode；（需要把该字符串转化成二维码提供给对应账号的用户扫码）	qrcode_id=oc8G912345y58oeIgkKNNJ0utp6vEi1r4qhaZbPI2ekasdAvmDp7i7Yobk7123NM&areaPrefix=4400&interfaceCode=0002
+account	String	用户名/手机号（脱敏处理）	138****1234
+qrCodeUrl	String	二维码页面url（预留）	
+endTime	String	二维码/短信 过期截止时间
+]

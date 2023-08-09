@@ -12,7 +12,7 @@ public class DeliveryInvoiceRequest : NuoNuoRequest
     /// 销方税号
     /// <code> 必填: Y </code>
     /// <code> 长度: 20 </code>
-    /// <code> 示例: 339901999999199 </code>
+    /// <code> 示例: <![CDATA[339901999999199]]> </code>
     /// </summary>
     [JsonPropertyName("taxnum")]
     [JsonProperty("taxnum", Required = Required.Always)]
@@ -23,7 +23,7 @@ public class DeliveryInvoiceRequest : NuoNuoRequest
     /// 发票代码（全电发票时可为空）
     /// <code> 必填: N </code>
     /// <code> 长度: 12 </code>
-    /// <code> 示例: 131880930199 </code>
+    /// <code> 示例: <![CDATA[131880930199]]> </code>
     /// </summary>
     [JsonPropertyName("invoiceCode")]
     [JsonProperty("invoiceCode")]
@@ -34,7 +34,7 @@ public class DeliveryInvoiceRequest : NuoNuoRequest
     /// 发票号码（全电发票时为20位，其他发票时为8位）
     /// <code> 必填: Y </code>
     /// <code> 长度: 8 </code>
-    /// <code> 示例: 19902647 </code>
+    /// <code> 示例: <![CDATA[19902647]]> </code>
     /// </summary>
     [JsonPropertyName("invoiceNum")]
     [JsonProperty("invoiceNum", Required = Required.Always)]
@@ -45,7 +45,7 @@ public class DeliveryInvoiceRequest : NuoNuoRequest
     /// 交付手机号，和交付邮箱至少有一个不为空
     /// <code> 必填: N </code>
     /// <code> 长度: 11 </code>
-    /// <code> 示例: 133333333333 </code>
+    /// <code> 示例: <![CDATA[133333333333]]> </code>
     /// </summary>
     [JsonPropertyName("phone")]
     [JsonProperty("phone")]
@@ -56,7 +56,7 @@ public class DeliveryInvoiceRequest : NuoNuoRequest
     /// 交付邮箱，和交付手机号至少有一个不为空
     /// <code> 必填: N </code>
     /// <code> 长度:  </code>
-    /// <code> 示例:  </code>
+    /// <code> 示例: <![CDATA[]]> </code>
     /// </summary>
     [JsonPropertyName("mail")]
     [JsonProperty("mail")]

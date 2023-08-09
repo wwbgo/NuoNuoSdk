@@ -1,0 +1,7 @@
+﻿result	Object	结果	
+[
+eleAccount	String	全电账户	
+certificationStatus	String	开票认证状态：0-未知；1-已认证；2-待认证，3-查询中 （登录状态：0-未登录；1-已登录）	1
+extensionNumber	String	分机号	333
+loginType	String	登录模式（0-账号密码快捷登录 1-扫码登录 2-短信验证码登录 3-证书登录） 注：只在queryType=2 时返回该字段
+]
